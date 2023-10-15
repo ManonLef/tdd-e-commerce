@@ -4,22 +4,22 @@ import Header from "./Header";
 
 describe("Header component", () => {
   it("renders logo component", () => {
-    render(<Header />)
+    render(<Header />);
     expect(screen.getByRole("banner").textContent).toMatch(/logo/i);
-  })
+  });
 
   it("renders home link component", () => {
-    render(<Header />)
-    expect(screen.getByRole('link', { name: "home" })).toBeInTheDocument();
-  })
+    render(<Header />);
+    expect(screen.getByRole("link", { name: "home" })).toBeInTheDocument();
+  });
 
   it("renders shop link component", () => {
-    render(<Header />)
-    expect(screen.getByRole('link', { name: "shop" })).toBeInTheDocument();
-  })
+    render(<Header />);
+    expect(screen.getByRole("link", { name: "shop" })).toBeInTheDocument();
+  });
 
   it("renders cart link component", () => {
-    render(<Header />)
-    expect(screen.getByRole('link', { name: "cart" })).toBeInTheDocument();
-  })
-})
+    render(<Header />);
+    expect(screen.getByRole("link", { name: "cart" })).toBeInTheDocument();
+  });
+});
