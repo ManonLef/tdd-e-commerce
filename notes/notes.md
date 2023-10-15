@@ -105,7 +105,11 @@ Here is where I will keep a log of this project's progress.
   - method to update shopping cart
 
 ## TDD rewrite in this repo
-- [ ] rewrite basic setup with `main.jsx`
+- [x] rewrite basic setup with `main.jsx`
+
+## 2023-10-15 rewrite progress:
+- Approached it TDD
+- Had some **failing tests** after my router addition. Fixed by wrapping the `App` and `Header` component in my Router component inside the test file.
 
 ## Ideas for future
 - store API data fetch in localStorage and only useEffect (if possible) based on data available in LS
