@@ -13,7 +13,10 @@ const Header = () => {
           <a href="">cart</a> */}
           <Link to={`/`}>home</Link>
           <Link to={`/shop`}>shop</Link>
-          <Link to={`/cart`}>cart</Link>
+          <div>
+            <Link to={`/cart`}>cart</Link>
+            <div className="cartItems">0</div>
+          </div>
         </div>
       </header>
     </>
