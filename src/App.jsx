@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Home from "./components/Home";
 
 const App = () => {
   console.log("rendering App component");
@@ -6,7 +7,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <div>hi from App</div>
+      <Home />
     </>
   );
 };
