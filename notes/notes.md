@@ -111,6 +111,8 @@ Here is where I will keep a log of this project's progress.
 - Approached it TDD
 - Had some **failing tests** after my router addition. Fixed by wrapping the `App` and `Header` component in my Router component inside the test file.
 
+- added initial setup of `context` but didn't manage to test it yet due to many errors. Will have to read in to more examples later.
+
 ## Ideas for future
 - store API data fetch in localStorage and only useEffect (if possible) based on data available in LS
   -(this is probably not needed now but might be good for future to limit API calls?)

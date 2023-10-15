@@ -11,15 +11,12 @@ const Header = () => {
       <header>
         <div>logo</div>
         <div>
-          {/* <a href="">home</a>
-          <a href="">shop</a>
-          <a href="">cart</a> */}
           <Link to={`/`}>home</Link>
           <Link to={`/shop`}>shop</Link>
-          <div>
-            <Link to={`/cart`}>cart</Link>
-            <div className="cartItems">{cartItems.length}</div>
-          </div>
+          <Link to={`/cart`}>
+            cart
+            <div>{cartItems.length}</div>
+          </Link>
         </div>
       </header>
     </>

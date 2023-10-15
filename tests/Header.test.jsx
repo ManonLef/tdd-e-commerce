@@ -21,7 +21,7 @@ describe("Header component", () => {
 
   it("renders cart link component", () => {
     render(<Header />, { wrapper: Router });
-    expect(screen.getByRole("link", { name: "cart" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /cart/i })).toBeInTheDocument();
   });
 
   it("has a cart item amount of zero initially", () => {
