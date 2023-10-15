@@ -1,9 +1,14 @@
+import Header from "./components/Header";
+
 const App = () => {
-  console.log("rendering App component")
+  console.log("rendering App component");
 
   return (
-    <div>hi from App</div>
-  )
-}
+    <>
+      <Header />
+      <div>hi from App</div>
+    </>
+  );
+};
 
-export default App
+export default App;
