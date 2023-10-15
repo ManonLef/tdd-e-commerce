@@ -25,4 +25,26 @@ describe("App component", () => {
 
     expect(screen.getByText(/hi from shop/i)).toBeInTheDocument();
   });
+
+  it("renders shop when clicking on the shop link", async () => {
+    const user = userEvent.setup();
+
+    render(<App />, { wrapper: Router });
+    const link = screen.getByRole("link", { name: /shop/i });
+
+    await user.click(link);
+
+    expect(screen.getByText(/hi from shop/i)).toBeInTheDocument();
+  });
+
+  it("renders home when clicking on the home link", async () => {
+    const user = userEvent.setup();
+
+    render(<App />, { wrapper: Router });
+    const link = screen.getByRole("link", { name: /home/i });
+
+    await user.click(link);
+
+    expect(screen.getByText(/hi from home/i)).toBeInTheDocument();
+  });
 });
