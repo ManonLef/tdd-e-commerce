@@ -6,8 +6,8 @@ const Shop = () => {
   const { data, loading, error } = useContext(ShopContext);
   console.log(data)
   
-  if (loading) return <div className="flex-1">products loading</div>;
   if (error) return <div className="flex-1">error {error}</div>;
+  if (loading) return <div className="flex-1">products loading</div>;
   
   return (
     <div>hi from Shop</div>

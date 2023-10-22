@@ -16,7 +16,7 @@ const FetchData = (url) => {
       })
       .then((data) => {
         setError(data.error);
-        setData(data.data.products.edges);
+        setData(data);
         setLoading(false);
       });
     // json.data.products.edges
