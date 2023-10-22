@@ -9,19 +9,20 @@ const FetchData = (url) => {
     console.log("fetching")
     fetch(url)
       .then((response) => {
+        console.log(response)
         if (response.status >= 400) {
-          throw new Error("server error");
+          setError(response.status);
+          throw new Error("server error", response.status);
         }
         return response.json();
       })
       .then((data) => {
-        setError(data.error);
         setData(data);
         setLoading(false);
       });
     // json.data.products.edges
   }, [url]);
-
+  console.log("DATA", data, loading, error)
   return { data, loading, error };
 };
 
