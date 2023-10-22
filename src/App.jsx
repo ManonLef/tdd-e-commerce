@@ -17,7 +17,7 @@ const App = () => {
 
   // API Fetch
   const url =
-    "https://fakestoreapi.com/produc";
+    "https://fakestoreapi.com/products";
   // data will contain the shop products
   const { data, loading, error } = FetchData(url);
 
