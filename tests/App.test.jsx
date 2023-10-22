@@ -26,6 +26,17 @@ describe("App component", () => {
     expect(screen.getByText(/loading/i)).toBeInTheDocument();
   });
 
+  it("renders cart when clicking on the shop link", async () => {
+    const user = userEvent.setup();
+
+    render(<App />, { wrapper: Router });
+    const link = screen.getByRole("link", { name: /cart/i });
+
+    await user.click(link);
+
+    expect(screen.getByText(/hi from cart/i)).toBeInTheDocument();
+  });
+
   it("renders home when clicking on the home link", async () => {
     const user = userEvent.setup();
 
