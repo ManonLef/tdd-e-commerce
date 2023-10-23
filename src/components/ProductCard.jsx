@@ -14,7 +14,7 @@ const ProductCard = ({ ...props }) => {
   return (
     <div className="flex flex-col justify-between border rounded p-3 w-2/12 bg-white overflow-hidden">
       <div>
-        <img src={props.image} alt="" />
+        <img src={props.image} alt="" className="hue-rotate-60"/>
         {/* <div className="flex">{props.title}</div> */}
       </div>
       <div>

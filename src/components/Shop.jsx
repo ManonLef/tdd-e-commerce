@@ -9,11 +9,13 @@ const Shop = () => {
   if (error) return <div className="flex-1 p-5">error {error}</div>;
   if (loading) return <div className="flex-1 p-5">products loading</div>;
 
+  const img4 = new URL("../images/image4.jpg", import.meta.url).href;
+
   return (
-    <div className="p-5">
-      <h1>Shop</h1>
+    <div className="flex flex-col p-5 max-w-screen-xl m-auto items-center">
+      <img src={img4} alt="" className="m-5 max-w-6xl"/>
       <div className="flex-1 p-5">
-        <div className="flex gap-3 flex-wrap justify-center m-10">
+        <div className="flex gap-3 flex-wrap justify-center">
           {data.map((product) => {
             return (
               <ProductCard

@@ -8,12 +8,12 @@ const Header = () => {
 
   return (
     <>
-      <header className="  bg-yellow-600 text-white">
-        <div className="max-w-screen-xl flex flex-wrap justify-between p-5 h-16 m-auto">
-          <div>logo</div>
-          <div className="flex gap-8">
+      <header className="bg-yellow-600 text-white text-xl">
+        <div className="max-w-screen-xl flex flex-wrap justify-between p-5 h-16 m-auto gap-2">
+          <div className="italic">FROU FROU</div>
+          <div className="flex gap-8 uppercase">
             <Link to={`/`}>home</Link>
-            <Link to={`/shop`}>shop</Link>
+            <Link to={`/shop`}>le shop</Link>
           </div>
           <div>
             <Link to={`/cart`}>

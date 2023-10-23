@@ -8,12 +8,13 @@ const Home = () => {
 
   return (
     <div className="flex-1 p-5 max-w-screen-xl m-auto">
-      <div className="flex flex-col gap-3 items-center">
-        <h1 className="text-4xl">Welcome to our shop!</h1>
+      <div className="flex flex-col gap-3 items-center my-5">
+        <h1 className="text-4xl">Welcome to Le Shop de Frou Frou!</h1>
         <p className="text-center text-xl">
           We are dedicated to making your shopping experience memorable. Thank
           you for choosing us as your go-to destination for all your fashion
-          needs. Wishing you a joyful fall, holiday season and a stylish year ahead!
+          needs. Wishing you a joyful fall, holiday season and a stylish year
+          ahead!
         </p>
         <button className="max-w-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-300 rounded shadow">
           <Link to={`/shop`}>Shop now</Link>
