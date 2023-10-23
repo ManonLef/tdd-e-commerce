@@ -6,10 +6,8 @@ const FetchData = (url) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log("fetching")
     fetch(url)
       .then((response) => {
-        console.log(response)
         if (response.status >= 400) {
           setError(response.status);
           throw new Error("server error", response.status);
