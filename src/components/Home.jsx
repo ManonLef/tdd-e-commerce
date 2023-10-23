@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  console.log("rendering Home component");
   const img1 = new URL("../images/image1.jpg", import.meta.url).href;
   const img2 = new URL("../images/image2.jpg", import.meta.url).href;
   const img3 = new URL("../images/image3.jpg", import.meta.url).href;
