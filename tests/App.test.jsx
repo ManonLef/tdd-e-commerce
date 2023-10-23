@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { getByRole, render, screen, waitFor } from "@testing-library/react";
 import App from "../src/App";
 import userEvent from "@testing-library/user-event";
 import Router from "../src/components/Router";
@@ -23,10 +23,10 @@ describe("App component", () => {
 
     await user.click(link);
 
-    expect(screen.getByText(/Title/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', {  name: /shop/i})).toBeInTheDocument();
   });
 
-  it("renders cart when clicking on the shop link", async () => {
+  it("renders cart when clicking on the cart link", async () => {
     const user = userEvent.setup();
 
     render(<App />, { wrapper: Router });
@@ -34,7 +34,7 @@ describe("App component", () => {
 
     await user.click(link);
 
-    expect(screen.getByText(/hi from cart/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /shopping cart/i })).toBeInTheDocument();
   });
 
   it("renders home when clicking on the home link", async () => {

@@ -10,21 +10,24 @@ const Shop = () => {
   if (loading) return <div className="flex-1">products loading</div>;
 
   return (
-    <div className="flex-1 p-5">
-      <div className="flex gap-3 flex-wrap justify-center m-10">
-        {data.map((product) => {
-          return (
-            <ProductCard
-              key={product.id}
-              title={product.title}
-              description={product.description}
-              image={product.image}
-              price={product.price}
-            />
-          );
-        })}
+    <>
+    <h1>Shop</h1>
+      <div className="flex-1 p-5">
+        <div className="flex gap-3 flex-wrap justify-center m-10">
+          {data.map((product) => {
+            return (
+              <ProductCard
+                key={product.id}
+                title={product.title}
+                description={product.description}
+                image={product.image}
+                price={product.price}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
