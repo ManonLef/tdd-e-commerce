@@ -23,7 +23,7 @@ describe("App component", () => {
 
     await user.click(link);
 
-    expect(screen.getByText(/loading/i)).toBeInTheDocument();
+    expect(screen.getByText(/hi from shop/i)).toBeInTheDocument();
   });
 
   it("renders cart when clicking on the shop link", async () => {
