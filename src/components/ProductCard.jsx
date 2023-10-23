@@ -30,7 +30,7 @@ const ProductCard = ({ ...props }) => {
         />
         <button
           onClick={() => addToCart(input, props)}
-          className="bg-gray-100 px-2 w-full rounded">
+          className="bg-gray-100 px-2 w-full rounded hover:bg-gray-300">
           add to cart
         </button>
       </div>
