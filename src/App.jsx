@@ -32,9 +32,11 @@ const App = () => {
     let items = array.reduce(function (a, b) {
       return a + b.amount;
     }, 0);
-    let price = array.reduce(function (a, b) {
-      return a + Math.round(b.price * b.amount * 100) / 100;
-    }, 0);
+    let price = array
+      .reduce(function (a, b) {
+        return a + b.price * b.amount;
+      }, 0)
+      .toFixed(2);
     return [items, price];
   };
 
