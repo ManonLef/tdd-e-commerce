@@ -3,14 +3,14 @@ import { ShopContext } from "../App";
 
 const ProductCard = ({ ...props }) => {
   const { addToCart } = useContext(ShopContext);
-  const [input, setInput] = useState(1)
+  const [input, setInput] = useState(1);
 
   function inputHandler(e) {
-    e.preventDefault()
-    const amount = e.target.value
-    setInput(amount)
+    e.preventDefault();
+    const amount = e.target.value;
+    setInput(amount);
   }
-  
+
   return (
     <div className="flex flex-col justify-between border rounded p-3 w-2/12 bg-white">
       <div>
@@ -30,7 +30,9 @@ const ProductCard = ({ ...props }) => {
           placeholder="1"
           onChange={inputHandler}
         />
-        <button onClick={() => addToCart(input, props)} className="bg-gray-100 px-2 w-full rounded">
+        <button
+          onClick={() => addToCart(input, props)}
+          className="bg-gray-100 px-2 w-full rounded">
           add to cart
         </button>
       </div>

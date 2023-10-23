@@ -5,16 +5,17 @@ const Cart = () => {
   const { cartItems } = useContext(ShopContext);
 
   if (cartItems.length > 0) return (
-    <div>
+    <div className="flex-1 p-5">
       <h1>Shopping Cart</h1>
       {cartItems.map((item, index) => {
+        console.log(index)
         return <div key={index}>{item.title}</div>;
       })}
     </div>
   );
   return <>
     <h1>Shopping Cart</h1>
-    <div>There are no items in your cart yet</div>
+    <div className="flex-1 p-5">There are no items in your cart yet</div>
     </>
 };
 

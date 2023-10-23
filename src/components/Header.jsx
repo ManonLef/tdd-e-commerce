@@ -8,15 +8,17 @@ const Header = () => {
 
   return (
     <>
-      <header>
+      <header className="flex flex-wrap justify-between p-5 h-16  bg-pink-300 text-white">
         <div>logo</div>
-        <div>
+        <div className="flex gap-2">
           <Link to={`/`}>home</Link>
           <Link to={`/shop`}>shop</Link>
-          <Link to={`/cart`}>
-            cart
+          <div className="flex gap-1">
+            <Link to={`/cart`}>
+              cart amount:
+            </Link>
             <div>{cartItems.length}</div>
-          </Link>
+          </div>
         </div>
       </header>
     </>

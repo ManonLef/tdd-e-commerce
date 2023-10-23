@@ -16,6 +16,8 @@ const App = () => {
     for (let i = 0; i < amount; i++) {
       copy.push(product);
     }
+    // if item is already in cart: add current amount to item amount
+    // if item is not in cart yet: add item and set amount
     setCartItems(copy);
   };
 
@@ -27,9 +29,11 @@ const App = () => {
   return (
     <ShopContext.Provider
       value={{ cartItems, data, addToCart, loading, error }}>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div className="flex flex-col h-screen">
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
     </ShopContext.Provider>
   );
 };
