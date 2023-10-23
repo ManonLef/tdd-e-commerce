@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getByRole, render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "../src/App";
 import userEvent from "@testing-library/user-event";
 import Router from "../src/components/Router";
@@ -7,7 +7,9 @@ import Router from "../src/components/Router";
 describe("App component", () => {
   it("renders homepage on first render", () => {
     render(<App />, { wrapper: Router });
-    expect(screen.getByText(/Welcome to Le Shop de Frou Frou/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Welcome to Le Shop de Frou Frou/i)
+    ).toBeInTheDocument();
   });
 
   it("renders footer on first render", () => {
@@ -23,7 +25,7 @@ describe("App component", () => {
 
     await user.click(link);
 
-    expect(screen.getByRole('img', {  name: /coat/i})).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: /coat/i })).toBeInTheDocument();
   });
 
   it("renders cart when clicking on the cart link", async () => {
@@ -34,7 +36,9 @@ describe("App component", () => {
 
     await user.click(link);
 
-    expect(screen.getByRole('heading', { name: /shopping cart/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /shopping cart/i })
+    ).toBeInTheDocument();
   });
 
   it("renders home when clicking on the home link", async () => {
@@ -45,6 +49,8 @@ describe("App component", () => {
 
     await user.click(link);
 
-    expect(screen.getByText(/Welcome to Le Shop de Frou Frou!/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Welcome to Le Shop de Frou Frou!/i)
+    ).toBeInTheDocument();
   });
 });
