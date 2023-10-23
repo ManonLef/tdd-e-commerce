@@ -3,7 +3,6 @@ import { useContext } from "react";
 import { ShopContext } from "../App";
 
 const Header = () => {
-  console.log("rendering Header Component");
   const { amountInCart } = useContext(ShopContext);
 
   return (
