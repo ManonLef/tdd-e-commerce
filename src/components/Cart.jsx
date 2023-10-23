@@ -7,9 +7,8 @@ const Cart = () => {
   if (cartItems.length > 0) return (
     <div className="flex-1 p-5">
       <h1>Shopping Cart</h1>
-      {cartItems.map((item, index) => {
-        console.log(index)
-        return <div key={index}>{item.title}</div>;
+      {cartItems.map((item) => {
+        return <div key={item.id}>{item.title}</div>;
       })}
     </div>
   );

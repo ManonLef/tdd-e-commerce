@@ -13,12 +13,22 @@ const App = () => {
 
   const addToCart = (amount, product) => {
     const copy = [...cartItems];
-    for (let i = 0; i < amount; i++) {
+    console.log(product.id);
+    // if item is already in cart: add current amount to item amount
+    // check id against products in cart
+    const id = product.id;
+    const check = copy.findIndex((product) => product.id === id);
+    if (check >= 0) {
+      copy[check].amount += amount;
+      console.log("It's here", copy[check]);
+    } else {
+      // if item is not in cart yet: add item and set amount
+      product.amount = amount;
+      console.log("Not here yet", amount);
       copy.push(product);
     }
-    // if item is already in cart: add current amount to item amount
-    // if item is not in cart yet: add item and set amount
     setCartItems(copy);
+    console.log("cart", copy)
   };
 
   // API Fetch
