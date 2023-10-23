@@ -7,8 +7,6 @@ import FetchData from "./components/FetchData";
 export const ShopContext = createContext();
 
 const App = () => {
-  console.log("rendering App component");
-
   const [cartItems, setCartItems] = useState([]);
   const [amountInCart, setAmountInCart] = useState([0, 0]);
 

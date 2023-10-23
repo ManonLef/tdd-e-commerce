@@ -7,23 +7,23 @@ import Router from "../src/components/Router";
 describe("App component", () => {
   it("renders homepage on first render", () => {
     render(<App />, { wrapper: Router });
-    expect(screen.getByText(/hi from home/i)).toBeInTheDocument();
+    expect(screen.getByText(/Welcome to Le Shop de Frou Frou/i)).toBeInTheDocument();
   });
 
   it("renders footer on first render", () => {
     render(<App />, { wrapper: Router });
-    expect(screen.getByText(/footer content/i)).toBeInTheDocument();
+    expect(screen.getByText(/manon lef/i)).toBeInTheDocument();
   });
 
   it("renders shop when clicking on the shop link", async () => {
     const user = userEvent.setup();
 
     render(<App />, { wrapper: Router });
-    const link = screen.getByRole("link", { name: /shop/i });
+    const link = screen.getByRole("link", { name: "Shop" });
 
     await user.click(link);
 
-    expect(screen.getByRole('heading', {  name: /shop/i})).toBeInTheDocument();
+    expect(screen.getByRole('img', {  name: /coat/i})).toBeInTheDocument();
   });
 
   it("renders cart when clicking on the cart link", async () => {
@@ -45,6 +45,6 @@ describe("App component", () => {
 
     await user.click(link);
 
-    expect(screen.getByText(/hi from home/i)).toBeInTheDocument();
+    expect(screen.getByText(/Welcome to Le Shop de Frou Frou!/i)).toBeInTheDocument();
   });
 });

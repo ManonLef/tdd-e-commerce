@@ -15,7 +15,7 @@ const Shop = () => {
   if (loading)
     return (
       <div className="flex flex-col p-5 max-w-screen-xl m-auto items-center">
-        products loading
+        products loading....
       </div>
     );
 
@@ -23,7 +23,7 @@ const Shop = () => {
 
   return (
     <div className="flex flex-col p-5 max-w-screen-xl m-auto items-center">
-      <img src={img4} alt="" className="m-5 max-w-6xl" />
+      <img src={img4} alt="coat on shopping rack" className="m-5 max-w-6xl" />
       <div className="flex-1 p-5">
         <div className="flex gap-3 flex-wrap justify-center">
           {data.map((product) => {
