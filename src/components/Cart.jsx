@@ -10,7 +10,7 @@ const Cart = () => {
         <>
           <h1>Shopping Cart</h1>
           <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-4 gap-4">
             <div>Product:</div>
             <div>Amount</div>
             <div>Individual Price</div>
@@ -21,7 +21,7 @@ const Cart = () => {
         {cartItems.map((item) => {
           const totalPrice = (item.price * item.amount).toFixed(2)
           return (
-            <div key={item.id} className="grid grid-cols-4">
+            <div key={item.id} className="grid grid-cols-4 gap-4">
               <div>{item.title}</div>
               <div>{item.amount}</div>
               <div>$ {item.price}</div>
@@ -30,7 +30,7 @@ const Cart = () => {
           );
         })}
         <hr className="my-5 h-0.5 border-t-0 bg-neutral-100 opacity-100 dark:opacity-50" />
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-4 gap-4">
           <div>Shopping Cart Total</div>
           <div></div>
           <div></div>
