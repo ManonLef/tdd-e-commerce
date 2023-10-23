@@ -11,8 +11,12 @@ const App = () => {
 
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = () => {
-    setCartItems(cartItems + 1);
+  const addToCart = (amount, product) => {
+    const copy = [...cartItems];
+    for (let i = 0; i < amount; i++) {
+      copy.push(product);
+    }
+    setCartItems(copy);
   };
 
   // API Fetch
