@@ -113,6 +113,17 @@ Here is where I will keep a log of this project's progress.
 
 - added initial setup of `context` but didn't manage to test it yet due to many errors. Will have to read in to more examples later.
 
+## 2023-10-22
+- Returned after a short break
+- Had less issues adding test with `context` this time. Provided dummy context to the ContextProvider
+- moved to different shop API because setting up GraphQL mocks seemed to be a bit more tedious for now with msw. 
+- messed up error handling. Had `if (loading)` before my `if (error)` so it never showed an error response
+- [ ] consider adding a resolve max time
+- started setting up [msw](https://mswjs.io/docs/getting-started/mocks/rest-api) for mocking 
+
+## 2023-10-23 
+- installed and set up handlers and server for msw to intercept API calls after a lot of googling, struggling and a rabbit hole of mocking, spying etc. 
+
 ## Ideas for future
 - store API data fetch in localStorage and only useEffect (if possible) based on data available in LS
   -(this is probably not needed now but might be good for future to limit API calls?)
