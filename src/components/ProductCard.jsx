@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { ShopContext } from "../App";
+import PropTypes from 'prop-types';
 
 const ProductCard = ({ ...props }) => {
   const { addToCart } = useContext(ShopContext);
@@ -15,7 +16,6 @@ const ProductCard = ({ ...props }) => {
     <div className="flex flex-col justify-between border rounded p-3 w-2/12 bg-white overflow-hidden">
       <div>
         <img src={props.image} alt="" className="hue-rotate-60"/>
-        {/* <div className="flex">{props.title}</div> */}
       </div>
       <div>
         <div>$ {props.price}</div>
@@ -37,5 +37,10 @@ const ProductCard = ({ ...props }) => {
     </div>
   );
 };
+
+ProductCard.propTypes = {
+  image: PropTypes.string,
+  price: PropTypes.number
+}
 
 export default ProductCard;
