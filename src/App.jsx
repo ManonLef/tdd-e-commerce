@@ -20,8 +20,6 @@ const App = () => {
   // data will contain the shop products
   const { data, loading, error } = FetchData(url);
 
-  console.log(data);
-
   return (
     <ShopContext.Provider
       value={{ cartItems, data, addToCart, loading, error }}>
