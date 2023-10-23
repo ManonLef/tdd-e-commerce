@@ -6,12 +6,12 @@ const Shop = () => {
   // get shop fetched data from Shopping API
   const { data, loading, error } = useContext(ShopContext);
 
-  if (error) return <div className="flex-1">error {error}</div>;
-  if (loading) return <div className="flex-1">products loading</div>;
+  if (error) return <div className="flex-1 p-5">error {error}</div>;
+  if (loading) return <div className="flex-1 p-5">products loading</div>;
 
   return (
-    <>
-    <h1>Shop</h1>
+    <div className="p-5">
+      <h1>Shop</h1>
       <div className="flex-1 p-5">
         <div className="flex gap-3 flex-wrap justify-center m-10">
           {data.map((product) => {
@@ -28,7 +28,7 @@ const Shop = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
