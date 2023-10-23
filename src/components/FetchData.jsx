@@ -18,9 +18,7 @@ const FetchData = (url) => {
         setData(data);
         setLoading(false);
       });
-    // json.data.products.edges
   }, [url]);
-  console.log("DATA", data, loading, error)
   return { data, loading, error };
 };
 
