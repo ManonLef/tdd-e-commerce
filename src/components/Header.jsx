@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="  bg-pink-300 text-white">
+      <header className="  bg-yellow-600 text-white">
         <div className="max-w-screen-xl flex flex-wrap justify-between p-5 h-16 m-auto">
           <div>logo</div>
           <div className="flex gap-8">

@@ -15,7 +15,7 @@ const Home = () => {
           you for choosing us as your go-to destination for all your fashion
           needs. Wishing you a joyful fall, holiday season and a stylish year ahead!
         </p>
-        <button className="max-w-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+        <button className="max-w-sm bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-300 rounded shadow">
           <Link to={`/shop`}>Shop now</Link>
         </button>
       </div>
