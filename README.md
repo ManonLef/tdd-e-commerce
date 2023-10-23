@@ -33,6 +33,8 @@ I have left some [notes in the repo](./notes/notes.md) and I will write some mor
 
 - [ ] mobile responsiveness
 - [ ] make it more clear item goes into cart
+- [ ] add delete button in cart
+- [ ] possibly add edit option for amount in cart
 - [ ] add tests after looking through similar projects for test ideas and practice
 - [ ] accessibility
   - [ ] semantic elements
