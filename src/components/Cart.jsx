@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { ShopContext } from "../App";
 
 const Cart = () => {
+  // context defined in: App.jsx
   const { cartItems, amountInCart } = useContext(ShopContext);
 
   if (cartItems.length > 0)
@@ -43,6 +44,7 @@ const Cart = () => {
         </div>
       </div>
     );
+
   return (
     <div className="flex flex-col gap-3 flex-1 p-5 max-w-screen-xl mx-auto my-5 text-center">
       <h1 className="text-2xl">Shopping Cart</h1>
