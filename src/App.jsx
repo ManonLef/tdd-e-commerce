@@ -10,25 +10,32 @@ const App = () => {
   console.log("rendering App component");
 
   const [cartItems, setCartItems] = useState([]);
+  const [amountInCart, setAmountInCart] = useState([0, 0]);
 
   const addToCart = (amount, product) => {
     const copy = [...cartItems];
-    console.log(product.id);
-    // if item is already in cart: add current amount to item amount
-    // check id against products in cart
     const id = product.id;
     const check = copy.findIndex((product) => product.id === id);
     if (check >= 0) {
+      // if item is already in cart, increase amount
       copy[check].amount += amount;
-      console.log("It's here", copy[check]);
     } else {
-      // if item is not in cart yet: add item and set amount
+      // if item is not in cart, add it including amount
       product.amount = amount;
-      console.log("Not here yet", amount);
       copy.push(product);
     }
     setCartItems(copy);
-    console.log("cart", copy)
+    setAmountInCart(calculateItems(copy));
+  };
+
+  const calculateItems = (array) => {
+    let items = array.reduce(function (a, b) {
+      return a + b.amount;
+    }, 0);
+    let price = array.reduce(function (a, b) {
+      return a + Math.round(b.price * b.amount * 100) / 100;
+    }, 0);
+    return [items, price];
   };
 
   // API Fetch
@@ -38,7 +45,7 @@ const App = () => {
 
   return (
     <ShopContext.Provider
-      value={{ cartItems, data, addToCart, loading, error }}>
+      value={{ cartItems, amountInCart, data, addToCart, loading, error }}>
       <div className="flex flex-col h-screen">
         <Header />
         <Outlet />

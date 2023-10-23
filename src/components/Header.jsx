@@ -4,7 +4,7 @@ import { ShopContext } from "../App";
 
 const Header = () => {
   console.log("rendering Header Component");
-  const { cartItems } = useContext(ShopContext);
+  const { amountInCart } = useContext(ShopContext);
 
   return (
     <>
@@ -15,9 +15,8 @@ const Header = () => {
           <Link to={`/shop`}>shop</Link>
           <div className="flex gap-1">
             <Link to={`/cart`}>
-              cart amount:
+              <div>Cart {amountInCart[0]} items for ${amountInCart[1]}</div>
             </Link>
-            <div>{cartItems.length}</div>
           </div>
         </div>
       </header>
