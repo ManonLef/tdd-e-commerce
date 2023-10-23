@@ -12,7 +12,7 @@ const ProductCard = ({ ...props }) => {
   }
 
   return (
-    <div className="flex flex-col justify-between border rounded p-3 w-2/12 bg-white">
+    <div className="flex flex-col justify-between border rounded p-3 w-2/12 bg-white overflow-hidden">
       <div>
         <img src={props.image} alt="" />
         <div className="flex">{props.title}</div>
