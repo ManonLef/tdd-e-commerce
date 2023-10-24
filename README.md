@@ -41,6 +41,8 @@ I have left some [notes in the repo](./notes/notes.md) and I will write some mor
   - [ ] alt text
 - [ ] consider local storage for returning visitors
 - [ ] refactor elements and functions as needed
+- [ ] add an actual error page
+- [ ] add a loading page
 
 ## image credits
 
